@@ -1,0 +1,16 @@
+
+:local(.topCont) {
+  background-color: grey;
+  width: 100%;
+  height: 433px;
+  background-image: url(https://a.hwstatic.com/image/upload/f_auto,q_auto,t_80,c_fill,g_north/v1/propertyimages/2/293315/xihcxa6w30pcik0le3kv);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+:local(.headerCont) {
+  margin-left: 12%;
+  margin-right: 12%;
+}
