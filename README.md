@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - Rich - calendar https://github.com/das-haustelles/rich-front-end-capstone
-  - Stanley - searchBar https://github.com/das-haustelles/stanley-front-end-capstone
-  - Julius - header https://github.com/das-haustelles/julius-front-end-capstone
-  - Jonathan - product description https://github.com/das-haustelles/product-description
+  - Rich - calendar (localhost 3001) https://github.com/das-haustelles/rich-front-end-capstone
+  - Stanley - searchBar (localhost 1128) https://github.com/das-haustelles/stanley-front-end-capstone
+  - Julius - header (localhost 3000) https://github.com/das-haustelles/julius-front-end-capstone
+  - Jonathan - product description (localhost 3004) https://github.com/das-haustelles/product-description
 
 ## Table of Contents
 

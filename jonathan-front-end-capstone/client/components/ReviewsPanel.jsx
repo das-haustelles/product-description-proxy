@@ -74,7 +74,7 @@ class ReviewsPanel extends React.Component {
     return (
       <EntireSection>
         <SidePanelHeader>
-          <Header2>Reviews & Ratings SIR!!!</Header2>
+          <Header2>Reviews & Ratings!!!</Header2>
           <XDiv>x</XDiv>
         </SidePanelHeader>
 

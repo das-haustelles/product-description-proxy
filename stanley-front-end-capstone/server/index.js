@@ -1,15 +1,20 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
+
 
 const app = express();
 const port = 1128;
 const bodyParser = require('body-parser');
-const { searchDB, SearchInputModel } = require('../database/index.js');
+const {
+  searchDB,
+  SearchInputModel,
+} = require('../database/index.js');
 // app.use(bodyParser.urlencoded());
 // app.use(bodyParser.json());
 app.use(cors());
 
-app.use(express.static(__dirname + '/../'));
+app.use(express.static(path.join(__dirname, '/../')));
 
 app.get('/Input', (req, res) => {
   SearchInputModel.find({}, (err, hostels) => {
