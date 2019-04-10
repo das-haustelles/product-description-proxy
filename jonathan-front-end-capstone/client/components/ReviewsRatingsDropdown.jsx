@@ -1,6 +1,3 @@
-import React from 'react';
-import styled from 'styled-components';
-
 const DropdownFilter = styled.div`
   position: relative;
   float: left;

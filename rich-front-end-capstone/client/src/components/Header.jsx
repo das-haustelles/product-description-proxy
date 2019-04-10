@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import styled from 'styled-components';
 
 const HeaderDisplay = styled.h2`
   font-family: 'Noto Sans', Helvetica, Arial, sans-serif;

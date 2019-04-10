@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import styled from 'styled-components';
 import Week from './Week';
 import Header from './Header';
 import generateDates from '../../utils/generateDates';

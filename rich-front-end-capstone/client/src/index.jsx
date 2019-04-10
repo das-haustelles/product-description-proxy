@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import moment from 'moment';
 import axios from 'axios';
-import styled from 'styled-components';
 import DateForm from './components/DateForm';
 
 const Availability = styled.section`
@@ -124,12 +123,12 @@ class App extends React.Component {
       <Div>
         <div>
           <DateRange>
-            <i className="fas fa-calendar-alt"></i>
+            <i className="fas fa-calendar-alt" />
             <Span>{`${checkIn} - ${checkOut}`}</Span>
           </DateRange>
         </div>
         <Change>
-          <i className="fas fa-search"></i>
+          <i className="fas fa-search" />
           <Span onClick={() => this.handleNewReservation()}>Change</Span>
         </Change>
       </Div>
@@ -142,14 +141,16 @@ class App extends React.Component {
     } = this.state;
     return (
       <div>
-        <DateForm checkIn= {checkInDate} 
-                  checkOut={checkOutDate} 
-                  bookedDates= {bookedDates}
-                  handleNewDate={this.handleNewDate}
-                  displayCheckInCalendar={displayCheckInCalendar} 
-                  displayCheckOutCalendar={displayCheckOutCalendar}
-                  handleCheckInClick={this.handleCheckInClick} 
-                  handleCheckOutClick={this.handleCheckOutClick} />
+        <DateForm
+          checkIn={checkInDate}
+          checkOut={checkOutDate}
+          bookedDates={bookedDates}
+          handleNewDate={this.handleNewDate}
+          displayCheckInCalendar={displayCheckInCalendar}
+          displayCheckOutCalendar={displayCheckOutCalendar}
+          handleCheckInClick={this.handleCheckInClick}
+          handleCheckOutClick={this.handleCheckOutClick}
+        />
       </div>
     );
   }
@@ -166,6 +167,3 @@ class App extends React.Component {
 }
 
 window.Calendar = App;
-
-ReactDOM.render(<App />, document.getElementById('app'));
-

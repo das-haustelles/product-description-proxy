@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import ReviewGuidelines from './ReviewGuidelines';
 import RatingSummaryBreakdown from './RatingSummaryBreakdown';
@@ -39,7 +38,7 @@ const Header2 = styled.h2`
   margin-bottom: .5rem;
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
-  font-family: "Noto",Helvetica,Arial,sans-serif;
+  font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
   font-style: normal;
   margin: 0;
   padding: 0;
@@ -74,7 +73,7 @@ class ReviewsPanel extends React.Component {
     return (
       <EntireSection>
         <SidePanelHeader>
-          <Header2>Reviews & Ratings!!!</Header2>
+          <Header2>Reviews & Ratings</Header2>
           <XDiv>x</XDiv>
         </SidePanelHeader>
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 const InputLabels = styled.span`
   font-size: 12px;

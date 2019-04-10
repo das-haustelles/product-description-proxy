@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import SearchInput from './components/SearchInput.jsx'
 import Calendar from './components/Calendar.jsx'
 import Groups from './components/Groups.jsx'

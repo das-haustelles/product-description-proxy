@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import GroupForm from './GroupForm';
 import GuestsDropDown from './GuestsDropDown';
 import Calendar from './Calendar';
@@ -56,20 +55,22 @@ class DateForm extends React.Component {
           <FormFields>
             <CheckInField
               checkIn={checkIn}
-              handleCheckInClick={handleCheckInClick} />
+              handleCheckInClick={handleCheckInClick}
+            />
             {displayCheckInCalendar ? <Calendar bookedDates={bookedDates} handleNewDate={handleNewDate} checkIn={checkIn} /> : <React.Fragment></React.Fragment>}
           </FormFields>
           <FormFields>
             <CheckOutField
               checkOut={checkOut}
-              handleCheckOutClick={handleCheckOutClick} />
+              handleCheckOutClick={handleCheckOutClick}
+            />
             {displayCheckOutCalendar ? <Calendar bookedDates={bookedDates} handleNewDate={handleNewDate} checkIn={checkIn} /> : <React.Fragment></React.Fragment>}
           </FormFields>
           <FormFields>
             <GuestsDropDown handleNumberOfGuests={this.handleNumberOfGuests} />
           </FormFields>
           <FormFields>
-            <span></span>
+            <span />
             <SearchButton type="submit">Search</SearchButton>
           </FormFields>
         </Form>

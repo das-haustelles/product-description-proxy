@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 const Inputs = styled.input`
   font-family: 'Noto Sans', Helvetica, Arial, sans-serif;

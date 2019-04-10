@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+
 import { KeyboardArrowLeft, KeyboardArrowRight } from 'styled-icons/material';
 
 const PaginationCenter = styled.div`
@@ -135,7 +135,6 @@ class PaginationComponent extends React.Component {
     super(props);
     this.state = {
       currentPage: 1,
-      // pagesArray: currentPage <= 3 ? [1, 2, 3, 4, 5] : [e.currentTarget.textContent - 2, this.currentPage - 1, this.currentPage, this.currentPage + 1, this.currentPage + 2],
       pagesArray: [1, 2, 3, 4, 5],
     };
     this.handleClick = this.handleClick.bind(this);
@@ -143,11 +142,11 @@ class PaginationComponent extends React.Component {
 
   handleClick(e) {
     const pageClicked = parseInt(e.currentTarget.textContent, 10);
-    console.log('page clicked:', pageClicked);
-    console.log('state is:', this.state);
     this.setState({
       currentPage: pageClicked,
-      pagesArray: pageClicked <= 3 ? [1, 2, 3, 4, 5] : [pageClicked - 2, pageClicked - 1, pageClicked, pageClicked + 1, pageClicked + 2],
+      pagesArray: pageClicked <= 3
+        ? [1, 2, 3, 4, 5]
+        : [pageClicked - 2, pageClicked - 1, pageClicked, pageClicked + 1, pageClicked + 2],
     });
   }
 
