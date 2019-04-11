@@ -7,8 +7,9 @@ const Hostel = require('./hostel.js');
 
 const sampleHostels = [];
 
-function createHostel() {
+function createHostel(id) {
   const oneHostel = {
+    id,
     name: faker.company.companyName(),
     propertyDescription: faker.lorem.text(),
     houseRules: {
@@ -36,8 +37,8 @@ function createHostel() {
   sampleHostels.push(oneHostel);
 }
 
-for (let i = 0; i < 3; i += 1) {
-  createHostel();
+for (let i = 1; i < 11; i += 1) {
+  createHostel(i);
 }
 
 // console.log(sampleHostels);

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styled from 'styled-components';
 import { Comment } from 'styled-icons/fa-regular';
 import { LocationOn } from 'styled-icons/material';
 import { Person } from 'styled-icons/octicons';

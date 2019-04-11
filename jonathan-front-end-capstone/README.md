@@ -20,6 +20,9 @@
 ## Usage
 
 > Some usage instructions
+-  run "build" for "webpack -d --watch",
+-  run "start" for "nodemon ./server/server.js"
+-  to seed database, run "node database-mongodb/hostelsSeed.js"
 
 ## Requirements
 

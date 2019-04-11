@@ -11,7 +11,7 @@ const reviewSchema = new mongoose.Schema({
   reviewText: String,
   reviewDate: Date,
   propertyReply: String,
-  hostelName: String,
+  hostelId: Number,
 }, {
   timestamps: true,
 });

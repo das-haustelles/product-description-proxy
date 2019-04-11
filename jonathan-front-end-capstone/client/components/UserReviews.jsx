@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+import axios from 'axios';
 import { User, Comments } from 'styled-icons/fa-solid';
 import { Calendar } from 'styled-icons/boxicons-regular';
 
@@ -166,63 +168,83 @@ const UserReviewReplySignatureSpan = styled.span`
   margin-left: .25rem;
 `;
 
-function UserReviewsComponent() {
-  return (
-    <div className="row-container">
-      <div className="small-12 columns">
-        <div className="intro">
-          <UserReviews>
-            <UserProfileSummary>
-              <BackgroundCircleUserLogo>
-                <StyledUserLogo />
-              </BackgroundCircleUserLogo>
+class UserReviewsComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hostelName: 'night owl',
+    };
+  }
 
-              <Username> yeah0904 </Username>
-              <UserDetails> South Korea, Female, 18-24 </UserDetails>
-              <UserRank> Novice Nomad </UserRank>
-              <IndividualUserReviews>
-                <IndividualUserReviewsLink href="wwww.hostelworld.com" target="_blank">4 reviews</IndividualUserReviewsLink>
-              </IndividualUserReviews>
-            </UserProfileSummary>
-            <UserReviewInfo>
-              <UserReviewInfoHeader>
-                <UserReviewInfoHeaderRating>
-                  <UserReviewInfoHeaderRatingScore>
-                    8.8
-                  </UserReviewInfoHeaderRatingScore>
-                  <UserReviewInfoHeaderRatingScoreInfo>
-                    <UserReviewInfoHeaderRatingScoreInfoKeyword>
-                      Fabulous
-                    </UserReviewInfoHeaderRatingScoreInfoKeyword>
-                  </UserReviewInfoHeaderRatingScoreInfo>
-                </UserReviewInfoHeaderRating>
+  componentDidMount() {
+    const hostelId = window.location.pathname.split('/')[1];
+    axios.get(`/hostels/${hostelId}/reviews`)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
-                <UserReviewHeaderDate>
-                  <CalendarIcon />
-                  <span> 6 Apr 2019 </span>
-                </UserReviewHeaderDate>
-              </UserReviewInfoHeader>
+  render() {
+    return (
+      <div className="row-container">
+        <div className="small-12 columns">
+          <div className="intro">
+            <UserReviews>
+              <UserProfileSummary>
+                <BackgroundCircleUserLogo>
+                  <StyledUserLogo />
+                </BackgroundCircleUserLogo>
 
-              <UserReviewInfoHeaderNotes>
-                Perfect, just dont doubt it
-              </UserReviewInfoHeaderNotes>
-              <UserReviewReply>
-                <UserReviewReplyParagraph>
-                  Thanks so much for leaving us an awesome review, we think youre perfect too ;)
-                </UserReviewReplyParagraph>
-                <UserReviewSignature>
-                  <UserReviewReplySignatureCommentLogo />
-                  <UserReviewReplySignatureSpan>
-                    Property Reply
-                  </UserReviewReplySignatureSpan>
-                </UserReviewSignature>
-              </UserReviewReply>
-            </UserReviewInfo>
-          </UserReviews>
+                <Username> yeah0904 </Username>
+                <UserDetails> South Korea, Female, 18-24 </UserDetails>
+                <UserRank> Novice Nomad </UserRank>
+                <IndividualUserReviews>
+                  <IndividualUserReviewsLink href="wwww.hostelworld.com" target="_blank">4 reviews</IndividualUserReviewsLink>
+                </IndividualUserReviews>
+              </UserProfileSummary>
+              <UserReviewInfo>
+                <UserReviewInfoHeader>
+                  <UserReviewInfoHeaderRating>
+                    <UserReviewInfoHeaderRatingScore>
+                      8.8
+                    </UserReviewInfoHeaderRatingScore>
+                    <UserReviewInfoHeaderRatingScoreInfo>
+                      <UserReviewInfoHeaderRatingScoreInfoKeyword>
+                        Fabulous
+                      </UserReviewInfoHeaderRatingScoreInfoKeyword>
+                    </UserReviewInfoHeaderRatingScoreInfo>
+                  </UserReviewInfoHeaderRating>
+
+                  <UserReviewHeaderDate>
+                    <CalendarIcon />
+                    <span> 6 Apr 2019 </span>
+                  </UserReviewHeaderDate>
+                </UserReviewInfoHeader>
+
+                <UserReviewInfoHeaderNotes>
+                  Perfect, just dont doubt it
+                </UserReviewInfoHeaderNotes>
+                <UserReviewReply>
+                  <UserReviewReplyParagraph>
+                    Thanks so much for leaving us an awesome review, we think youre perfect too ;)
+                  </UserReviewReplyParagraph>
+                  <UserReviewSignature>
+                    <UserReviewReplySignatureCommentLogo />
+                    <UserReviewReplySignatureSpan>
+                      Property Reply
+                    </UserReviewReplySignatureSpan>
+                  </UserReviewSignature>
+                </UserReviewReply>
+              </UserReviewInfo>
+            </UserReviews>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default UserReviewsComponent;

@@ -5,7 +5,7 @@
 ## Related Projects
 
   - Rich - calendar (localhost 3001) https://github.com/das-haustelles/rich-front-end-capstone
-  - Stanley - searchBar (localhost 1128) https://github.com/das-haustelles/stanley-front-end-capstone
+  - Stanley - searchBar (localhost 3003) https://github.com/das-haustelles/stanley-front-end-capstone
   - Julius - header (localhost 3000) https://github.com/das-haustelles/julius-front-end-capstone
   - Jonathan - product description (localhost 3004) https://github.com/das-haustelles/product-description
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const ReviewGuidelinesParagraph = styled.p`
   margin: 0 auto;
