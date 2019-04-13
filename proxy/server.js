@@ -11,6 +11,7 @@ app.use('/hostels/:id', express.static(path.join(__dirname, 'public')));
 // fetch request to julius' localhost:3000/location/country/:hostelId
 // fetch request to rich's 'localhost:3001/api/hostels/:hostelId'
 app.get('/api/hostels/:id', (req, res) => {
+  // http://13.57.217.200:3001/api/hostels/5
   axios.get(`http://localhost:3001/api/hostels/${req.params.id}`)
     .then(function (response) {
       res.status(200).send(response.data);
